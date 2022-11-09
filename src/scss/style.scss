@@ -1,3 +1,11 @@
-h1{
-    color: yellow;
+@import url('_reset.scss');
+@import url('_header.scss');
+.wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.screen-wrap{
+    max-width: 1920px;
+    margin: 0 auto; 
 }
