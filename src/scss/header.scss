@@ -1,31 +1,32 @@
-// font-style: normal | italic | oblique | inherit
 .header {
     display: flex;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    width: 100%;
 }
 .header_logo{
 
 }
-.header_info{
+
+.header_info {
 display: flex;
 font-family: 'Raleway', sans-serif;
+margin: 0 81px 0 0;
 
-}
-.header_info :first-child{
-    
-    font-size: 0.8em;
+.info-text{
+    font-size: 0.7em;
     font-weight: 500;
     color: #808080;
-    font-style: normal;
+    width: 189px;
 }
-.header_info :last-child{
-    
-    font-size: 1em;
+
+.info-delivery {
+    font-size: 1.3em;
     font-weight: 600;
     color: #32303E;
-    font-style: normal;
 }
+}
+
 .header-contacts{
     display: flex;
 }
