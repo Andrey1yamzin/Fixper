@@ -1,0 +1,32 @@
+.promo{
+    display: flex;
+}
+.promo-text{
+    flex-grow: 1;
+    flex-shrink: 0;
+    background: linear-gradient(40deg, rgba(32,36,59,1) 0%, rgba(52,56,81,1) 48%, rgba(66,69,97,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title{
+        font-family: 'Exo 2', sans-serif;
+        color: #fff;
+        font-size: 3.4em;
+        font-weight: 500;
+        width: 618px;
+        span{
+            color:#FFAB00;
+            font-family: 'Russo One', sans-serif;
+            font-weight: 400;
+        }
+    }
+    .subtitle{}
+    .promo-button{
+        span{}
+        .button{}
+    }
+}
+.promo-slider{
+    flex-grow: 0;
+    flex-shrink: 1;
+}
