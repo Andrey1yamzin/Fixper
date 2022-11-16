@@ -10,15 +10,10 @@ const prewBtn = document.querySelector(".arrows-left");
 const itemsCount = items.length;
 const itemWidth = container.clientWidth / slidesToShow;
 const movePosition = slidesToScroll * itemWidth;
-// let checkedNext = true;
-// let checkedPrew = true;
+
+
 checkBtn(position)
 
-nextBtn.addEventListener('click', slideNext);
-prewBtn.addEventListener('click', slidePrew);
-// nextBtn.addEventListener('mousedown', function(){
-
-// })
 items.forEach(function(item, index){
     item.style.minWidth = `${itemWidth}px`;
 });
@@ -27,13 +22,11 @@ function slideNext(){
     setPosition(position)
     checkBtn(position)
 }
-
 function slidePrew(){
     position += movePosition;
     setPosition(position)
     checkBtn(position)
 }
-
 function setPosition(value){
     track.style.transform = `translateX(${value}px)`;
 }
@@ -41,23 +34,26 @@ function checkBtn(pos){
     if(pos === 0){
         prewBtn.classList.remove('btn_active');
         prewBtn.classList.add('btn_not-active');
-        // checkedPrew = false;
+        prewBtn.removeEventListener('click', slidePrew);
     }
     if(pos < 0){
         prewBtn.classList.remove('btn_not-active');
         prewBtn.classList.add('btn_active');
-        // checkedPrew = true;
+        prewBtn.addEventListener('click', slidePrew);
     }
     if(pos <= -(itemsCount - slidesToShow)*itemWidth){
         nextBtn.classList.remove('btn_active');
         nextBtn.classList.add('btn_not-active');
-        // checkedNext = false;
+        nextBtn.removeEventListener('click', slideNext);
     }
     if(pos > -(itemsCount - slidesToShow)*itemWidth){
         nextBtn.classList.remove('btn_not-active');
         nextBtn.classList.add('btn_active');
-        // checkedNext = true;
+        nextBtn.addEventListener('click', slideNext);
     }
 }
+
+
+
 
 //сделать чекед что бы проверять true или false что бы отключаться или навешивать событие на кнопки
